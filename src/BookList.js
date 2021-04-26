@@ -5,17 +5,13 @@ import './BookList.css';
 class BookList extends Component {
 
   render() {
-
+    const books = this.props.books;
     return (
       <ul className="BookList">
-        <BookItem />
-        <BookItem />
-        <BookItem />
-        <BookItem />
-        <BookItem />
-        <BookItem />
-        <BookItem />
-        <BookItem />
+        {books.map(book => (
+          <BookItem key={book.name} book={book}/>
+        ))}
+
       </ul>
     );
   }

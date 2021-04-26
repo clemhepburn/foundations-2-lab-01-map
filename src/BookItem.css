@@ -4,12 +4,20 @@
   border: 2px solid rgb(112, 112, 112);
   padding: 10px;
   display: grid;
-  grid-template-rows: 30px 150px 20px;
-  grid-gap: 30px;
+  grid-template-rows: 40px 140px 20px;
+  grid-gap: 5px;
   justify-items: center;
+  align-items: center;
+  text-align: center;
 }
 
-.BookItem h2, p {
+.BookItem h2 {
+  margin: 10px 0 10px 0;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+
+.BookItem p {
   margin: 0;
 }
 

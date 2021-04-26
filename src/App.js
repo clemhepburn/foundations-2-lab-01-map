@@ -14,7 +14,7 @@ class App extends Component {
   
         <Header />
         <main>
-          <BookList />
+          <BookList books={books} />
         </main>
         <Footer />
       </div>
