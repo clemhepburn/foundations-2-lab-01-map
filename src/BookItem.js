@@ -8,6 +8,7 @@ class BookItem extends Component {
     return (
       <li className="BookItem">
         <h2>a book</h2>
+        <img src='books/funnyweather.jpg' alt='book cover'/>
       </li>
     );
   }

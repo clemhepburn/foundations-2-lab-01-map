@@ -9,6 +9,13 @@ class BookList extends Component {
     return (
       <ul className="BookList">
         <BookItem />
+        <BookItem />
+        <BookItem />
+        <BookItem />
+        <BookItem />
+        <BookItem />
+        <BookItem />
+        <BookItem />
       </ul>
     );
   }

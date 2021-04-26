@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './Header';
 import books from './books';
 import BookList from './BookList';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -15,7 +16,7 @@ class App extends Component {
         <main>
           <BookList />
         </main>
-      
+        <Footer />
       </div>
     );
   }
