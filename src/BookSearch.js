@@ -20,6 +20,12 @@ export default class BookSearch extends Component {
     this.props.onSearch(this.state);
   }
 
+  componentDidUpdate(prevProp, prevState) {
+    if (prevState !== this.state) {
+      this.props.onSearch(this.state);
+    }
+  }
+
   render() {
     const { nameSearch, sortField } = this.state;
     return (

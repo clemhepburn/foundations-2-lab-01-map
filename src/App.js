@@ -8,10 +8,29 @@ import Footer from './Footer';
 import BookSearch from './BookSearch';
 
 class App extends Component {
-  handleSearch = (search) => {
-    console.log(search);
+  state = {
+    books: books
+  }
+  
+  handleSearch = ({ nameSearch, sortField }) => {
+    const nameRegex = new RegExp(nameSearch, 'i');
+
+    const searchedData = books
+      .filter(book => {
+        return book.name.match(nameRegex);
+      })
+      .sort((a, b) => {
+        if (a[sortField] < b[sortField]) return -1;
+        if (a[sortField > b[sortField]]) return 1;
+        return 0;
+      });
+
+
+    this.setState({ books: searchedData });
+    
   }
   render() {
+    const { books } = this.state;
     return (
       <div className="App">
   
