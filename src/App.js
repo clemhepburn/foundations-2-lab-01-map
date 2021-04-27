@@ -1,7 +1,10 @@
 import { Component } from 'react';
-import logo from './react-logo.svg';
 import './App.css';
 import React from 'react';
+import Header from './Header';
+import books from './books';
+import BookList from './BookList';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -9,11 +12,11 @@ class App extends Component {
     return (
       <div className="App">
   
-        My React App...
-        
-        <img src={logo} className="temp-images" alt="react logo" />
-        <img src="acl-logo.png" className="temp-images" alt="acl logo" />
-      
+        <Header />
+        <main>
+          <BookList books={books} />
+        </main>
+        <Footer />
       </div>
     );
   }

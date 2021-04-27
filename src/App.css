@@ -1,8 +1,16 @@
-.App {
-  display: grid;
+* {
+  font-family: 'Times New Roman', Times, serif;
 }
 
-/* TODO: remove **/
-.temp-images {
-  height: 200px;
+.App {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  background: darkgray;
+}
+
+.App main {
+  overflow: auto;
+  margin: 0;
 }
