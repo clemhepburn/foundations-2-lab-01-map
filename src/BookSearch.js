@@ -16,6 +16,10 @@ export default class BookSearch extends Component {
     this.setState({ sortField: target.value });
   }
 
+  handleTypeChange = ({ target }) => {
+    this.setState({ typeFilter: target.value });
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSearch(this.state);
@@ -29,9 +33,10 @@ export default class BookSearch extends Component {
 
   render() {
     const { nameSearch, sortField, typeFilter } = this.state;
+    const { types } = this.props;
     return (
       <form className="BookSearch" onSubmit={this.handleSubmit}>
-        <input name="nameSearch" value={nameSearch} onChange={this.handleNameChange} />
+        <input placeholder="Title Search" name="nameSearch" value={nameSearch} onChange={this.handleNameChange} />
         <select name="sortField" value={sortField} onChange={this.handleSearchChange}>
           <option value="">Sort By...</option>
           <option value="title">Title</option>
@@ -39,13 +44,16 @@ export default class BookSearch extends Component {
           <option value="genre">Genre</option>
         </select>  
 
-        <select name="typeFilter" value={typeFilter} onChange={this.handleSearchChange}>
+        <select name="typeFilter" value={typeFilter} onChange={this.handleTypeChange}>
           <option value="">All</option>
-          <option value="Art">Art</option>
+          <option value="Art Criticism">Art Criticism</option>
           <option value="Architecture">Architecture</option>
           <option value="Poetry">Poetry</option>
           <option value="Fiction">Fiction</option>
           <option value="Dance">Dance</option>
+          {types.map(type => (
+            <option key={type} value={type}>{type}</option>
+          ))}
         </select>
         <button>📚</button>
         

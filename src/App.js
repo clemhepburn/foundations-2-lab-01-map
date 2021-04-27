@@ -7,17 +7,22 @@ import BookList from './BookList';
 import Footer from './Footer';
 import BookSearch from './BookSearch';
 
+const bookTypes = [...new Set(books.map(c => c.type))];
+
 class App extends Component {
   state = {
     books: books
   }
   
-  handleSearch = ({ nameSearch, sortField }) => {
+  handleSearch = ({ nameSearch, typeFilter, sortField }) => {
     const nameRegex = new RegExp(nameSearch, 'i');
 
     const searchedData = books
       .filter(book => {
-        return book.name.match(nameRegex);
+        return !nameSearch || book.name.match(nameRegex);
+      })
+      .filter(book => {
+        return !typeFilter || book.type === typeFilter;
       })
       .sort((a, b) => {
         if (a[sortField] < b[sortField]) return -1;
@@ -36,7 +41,7 @@ class App extends Component {
   
         <Header />
 
-        <BookSearch onSearch={this.handleSearch} />
+        <BookSearch types={bookTypes} onSearch={this.handleSearch} />
 
         <main>
           <BookList books={books} />
