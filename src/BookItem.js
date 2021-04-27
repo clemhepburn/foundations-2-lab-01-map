@@ -9,8 +9,9 @@ class BookItem extends Component {
     return (
       <li className="BookItem">
         <h2>{book.name}</h2>
+        <p>{book.author}</p>
         <img src={book.image} alt={book.name} />
-        <p>{book.genre}</p>
+        <p>{book.type}</p>
         <p>{book.year}</p>
       </li>
     );

@@ -4,7 +4,7 @@
   border: 2px solid rgb(112, 112, 112);
   padding: 10px;
   display: grid;
-  grid-template-rows: 40px 140px 20px;
+  grid-template-rows: 40px 30px 140px 20px;
   grid-gap: 5px;
   justify-items: center;
   align-items: center;
@@ -13,7 +13,7 @@
 
 .BookItem h2 {
   margin: 10px 0 10px 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: normal;
 }
 
