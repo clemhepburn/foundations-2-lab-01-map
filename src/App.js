@@ -14,6 +14,9 @@ class App extends Component {
       <div className="App">
   
         <Header />
+
+        <BookSearch />
+        
         <main>
           <BookList books={books} />
         </main>
