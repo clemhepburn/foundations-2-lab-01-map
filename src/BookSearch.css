@@ -1,3 +1,29 @@
 .BookSearch {
-  
+  padding: 0 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.BookSearch input {
+  width: 220px;
+  height: 30px;
+  outline: 0;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.BookSearch select {
+  width: 220px;
+  height: 36px;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.BookSearch button {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
 }
