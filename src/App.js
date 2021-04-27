@@ -8,15 +8,17 @@ import Footer from './Footer';
 import BookSearch from './BookSearch';
 
 class App extends Component {
-
+  handleSearch = (search) => {
+    console.log(search);
+  }
   render() {
     return (
       <div className="App">
   
         <Header />
 
-        <BookSearch />
-        
+        <BookSearch onSearch={this.handleSearch} />
+
         <main>
           <BookList books={books} />
         </main>
