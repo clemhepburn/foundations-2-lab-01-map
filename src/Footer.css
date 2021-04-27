@@ -1,4 +1,9 @@
 .Footer {
   padding: 10px;
-  font-size: 1rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-style: italic;
+  color: rgb(230, 230, 230)
 }

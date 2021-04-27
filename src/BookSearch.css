@@ -27,3 +27,7 @@
   height: 36px;
   cursor: pointer;
 }
+
+.BookSearch input, select, button {
+  border: 2px rgb(121, 121, 121) solid;
+}
