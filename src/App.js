@@ -5,6 +5,7 @@ import Header from './Header';
 import books from './books';
 import BookList from './BookList';
 import Footer from './Footer';
+import BookSearch from './BookSearch';
 
 class App extends Component {
 
